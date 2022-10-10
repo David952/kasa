@@ -1,0 +1,31 @@
+.collapse {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 33px;
+    background-color: $grey;
+    &__title_chevron {
+        background-color: $orange;
+        color: $white;
+    }
+    &__title_chevron {
+        height: 35px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        padding: 0 20px 0 16px;
+    }
+    &__chevron {
+        border-left: $border_chevron solid $white;
+        border-bottom: $border_chevron solid $white;
+        width: $size_chevron;
+        height: $size_chevron;
+        margin-top: 7px;
+        transform: rotate(135deg);
+    }
+    &__text {
+        color: $orange;
+        margin: 25px 27px 19px 18px;
+    }
+}

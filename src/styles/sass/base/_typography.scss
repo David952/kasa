@@ -1,0 +1,43 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.banner__text-Home {
+    color: $white;
+    font-size: 47px;
+    letter-spacing: 2px;
+}
+
+.card__link {
+    text-decoration: none;
+}
+
+.card__title {
+    color: $white;
+    font-size: 18px;
+}
+
+.collapse__title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.collapse__text {
+    font-size: 24px;
+}
+
+.error {
+    color: $orange;
+    &__number {
+        font-size: 288px;
+        font-weight: 700;
+    }
+    &__text {
+        font-size: 36px;
+        line-height: 100px;
+    }
+    &__link {
+        color: $orange;
+        font-size: 18px;
+    }
+}

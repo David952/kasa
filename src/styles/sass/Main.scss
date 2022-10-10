@@ -1,0 +1,14 @@
+@import "./utils/variables";
+
+@import "./base/base";
+@import "./base/typography";
+
+@import "./components/header";
+@import "./components/banner";
+@import "./components/card";
+@import "./components/Collapse/About/collapse";
+@import "./components/footer";
+
+@import "./pages/home";
+@import "./pages/about";
+@import "./pages/error";
