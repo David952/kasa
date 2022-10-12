@@ -31,7 +31,7 @@
   font-weight: 500;
 }
 
-.collapse__text {
+.collapse__container-text {
   font-size: 24px;
 }
 
@@ -142,7 +142,6 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 33px;
-  background-color: #F6F6F6;
 }
 .collapse__title_chevron {
   background-color: #FF6060;
@@ -171,7 +170,20 @@ header {
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
 }
-.collapse__text {
+.collapse__chevron.open {
+  margin-bottom: 12px;
+  -webkit-transform: rotate(314deg);
+          transform: rotate(314deg);
+}
+.collapse__container {
+  background-color: #F6F6F6;
+  max-height: 999px;
+}
+.collapse__container.closed {
+  display: none;
+  max-height: 0;
+}
+.collapse__container-text {
   color: #FF6060;
   margin: 25px 27px 19px 18px;
 }
