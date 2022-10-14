@@ -1,44 +1,46 @@
+@use '../../../utils/variables' as *;
+
 .collapse {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 33px;
+  &__title_chevron {
+    background-color: $orange;
+    color: $white;
+  }
+  &__title_chevron {
+    height: 35px;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-bottom: 33px;
-    &__title_chevron {
-        background-color: $orange;
-        color: $white;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0 20px 0 16px;
+  }
+  &__chevron {
+    border-left: $border_chevron solid $white;
+    border-bottom: $border_chevron solid $white;
+    width: $size_chevron;
+    height: $size_chevron;
+    margin-top: 7px;
+    transform: rotate(135deg);
+    &.open {
+      margin-bottom: 12px;
+      transform: rotate(314deg);
     }
-    &__title_chevron {
-        height: 35px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 5px;
-        padding: 0 20px 0 16px;
+  }
+  &__container {
+    background-color: $grey;
+    max-height: 999px;
+    //transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+    &.closed {
+      display: none;
+      max-height: 0;
+      //transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
     }
-    &__chevron {
-        border-left: $border_chevron solid $white;
-        border-bottom: $border_chevron solid $white;
-        width: $size_chevron;
-        height: $size_chevron;
-        margin-top: 7px;
-        transform: rotate(135deg);
-        &.open{
-            margin-bottom: 12px;
-            transform: rotate(314deg);
-        }
+    &-text {
+      color: $orange;
+      margin: 25px 27px 19px 18px;
     }
-    &__container {
-        background-color: $grey;
-        max-height: 999px;
-        //transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
-        &.closed {
-            display: none;
-            max-height: 0;
-            //transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
-        }
-        &-text {
-            color: $orange;
-            margin: 25px 27px 19px 18px;
-        }
-    }
+  }
 }

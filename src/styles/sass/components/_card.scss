@@ -1,18 +1,20 @@
+@use '../utils/variables' as *;
+
 .card {
-    height: 340px;
-    width: 340px;
-    border-radius: 10px;
-    background: linear-gradient(180deg, $orange 0%, rgba(0, 0, 0, 1) 205%);
-    overflow: hidden;
-    margin: 42px;
-    &__image {
-        height: 340px;
-        width: 340px;
-        object-fit : cover;
-    }
-    &__title {
-        position: relative;
-        left: 15px;
-        bottom: 50px;
-    }
+  height: $height_card;
+  width: $width_card;
+  border-radius: 10px;
+  background: linear-gradient(180deg, $orange 0%, rgba(0, 0, 0, 1) 205%);
+  overflow: hidden;
+  margin: 42px;
+  &__image {
+    height: $height_card;
+    width: $width_card;
+    object-fit: cover;
+  }
+  &__title {
+    position: relative;
+    left: 15px;
+    bottom: 50px;
+  }
 }

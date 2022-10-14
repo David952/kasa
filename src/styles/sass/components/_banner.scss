@@ -1,25 +1,25 @@
 .banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 223px;
-    margin: 0 100px 43px 100px;
-    border-radius: 25px;
-    position: relative;
-    overflow: hidden;
-    &__image-Home {
-        max-width: 1705px;
-        position: absolute;
-        z-index: 0;
-        top: -465%;
-        filter: brightness(60%);
-    }
-    &__text-Home {
-        position: absolute;
-        z-index: 1;
-    }
-    &__image-About {
-        position: absolute;
-        bottom: -670%;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 223px;
+  margin: 0 100px 43px 100px;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  &__image-Home {
+    max-width: 1705px;
+    position: absolute;
+    z-index: 0;
+    top: -465%;
+    filter: brightness(60%);
+  }
+  &__text-Home {
+    position: absolute;
+    z-index: 1;
+  }
+  &__image-About {
+    position: absolute;
+    bottom: -670%;
+  }
 }

@@ -1,13 +1,13 @@
 .error {
-    height: 800px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    &__number {
-        height: 263px;
-    }
-    &__link {
-        margin-top: 75px;
-    }
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  &__number {
+    height: 263px;
+  }
+  &__link {
+    margin-top: 75px;
+  }
 }
