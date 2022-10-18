@@ -20,6 +20,7 @@ function Home() {
     <>
       <Header />
       <Banner
+        BannerClass="banner banner-home"
         BannerClassImage="banner__image-Home"
         img={image}
         alt="Bord de falaise"

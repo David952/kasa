@@ -1,6 +1,6 @@
 import Header from '../components/Header';
 import Banner from '../components/Banner';
-import Collapse from '../components/About/Collapse';
+import Collapse from '../components/Collapse';
 import Footer from '../components/Footer';
 
 import image from '../assets/Banner/About/kalen-emsley-Bkci_8qcdvQ-unsplash.png';
@@ -33,15 +33,18 @@ function About() {
     <>
       <Header />
       <Banner
+        BannerClass="banner banner-about"
         BannerClassImage="banner__image-About"
         img={image}
         alt="Montagne"
       />
       <main className="about">
         {dataCollapse &&
-          dataCollapse.map((data) => {
+          dataCollapse.map((data, index) => {
             return (
               <Collapse
+                key={index}
+                CollapseClass="collapse"
                 CollapseTitle={data.AboutTitle}
                 CollapseText={data.AboutText}
               />

@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 function Error() {
   return (
@@ -19,7 +19,7 @@ function Error() {
       </main>
       <Footer />
     </React.Fragment>
-  )
+  );
 }
 
-export default Error
+export default Error;
