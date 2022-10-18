@@ -4,7 +4,7 @@ function Collapse(props) {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <div className="collapse">
+    <div className={props.CollapseClass}>
       <div
         className={`collapse__title_chevron ${isOpen ? 'open' : 'closed'}`}
         onClick={() => setOpen(!isOpen)}

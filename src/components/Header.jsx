@@ -3,8 +3,7 @@ import { NavLink } from 'react-router-dom';
 import logo from '../assets/Header/logo.png';
 
 function Header() {
-  const linkDecoration = 'linkActive';
-  const linkNotActive = 'linkNotActive';
+  const notActive = 'notActive';
 
   return (
     <header>
@@ -15,15 +14,16 @@ function Header() {
         <NavLink
           to="/"
           className={({ isActive }) => {
-            return isActive ? linkDecoration : linkNotActive;
+            return isActive ? 'active' : notActive;
           }}
+          end
         >
           Accueil
         </NavLink>
         <NavLink
           to="/about"
           className={({ isActive }) => {
-            return isActive ? linkDecoration : linkNotActive;
+            return isActive ? 'active' : notActive;
           }}
         >
           À Propos

@@ -1,6 +1,6 @@
 function Banner(props) {
   return (
-    <div className="banner">
+    <div className={props.BannerClass}>
       <img
         className={props.BannerClassImage}
         src={props.img}

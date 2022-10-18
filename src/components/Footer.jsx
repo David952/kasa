@@ -1,4 +1,4 @@
-import logo from '../assets/Footer/logo.png'
+import logo from '../assets/Footer/logo.png';
 
 function Footer() {
   return (
@@ -6,7 +6,7 @@ function Footer() {
       <img src={logo} alt="Logo Kasa"></img>
       <p>© 2020 Kasa. All rights reserved</p>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
