@@ -1,0 +1,25 @@
+@use '../../utils/variables' as *;
+
+.carousel {
+  height: 415px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+  &__image img {
+    width: 100%;
+  }
+  &__arrows {
+    font-size: 70px;
+    color: white;
+    &.arrow-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &.arrow-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}

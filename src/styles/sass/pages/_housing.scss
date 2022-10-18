@@ -1,0 +1,37 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.housing {
+  margin: 20px $margin_page 0 $margin_page;
+  &__datas {
+    @include flex_space_between;
+    flex-direction: column;
+  }
+  &__data-1 {
+    @include flex_space_between;
+  }
+  &__name-avatar {
+    display: flex;
+    align-items: center;
+  }
+  &__name {
+    width: 97px;
+  }
+  &__avatar {
+    width: 128px;
+    height: 128px;
+    background-color: #c4c4c4;
+    border-radius: 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  &__data-2 {
+    @include flex_space_between;
+  }
+  &__collapse {
+    @include flex_space_between;
+  }
+  &.description {
+    width: 50%;
+  }
+}

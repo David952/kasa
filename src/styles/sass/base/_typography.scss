@@ -6,7 +6,7 @@
 
 .banner__text-Home {
   color: $white;
-  font-size: 47px;
+  font-size: 48px;
   letter-spacing: 2px;
 }
 
@@ -16,7 +16,7 @@
 
 .card__title {
   color: $white;
-  font-size: 18px;
+  font-size: $title_link_size;
 }
 
 .collapse__title {
@@ -36,10 +36,10 @@
   }
   &__text {
     font-size: 36px;
-    line-height: 100px;
+    line-height: 51px;
   }
   &__link {
     color: $orange;
-    font-size: 18px;
+    font-size: $title_link_size;
   }
 }

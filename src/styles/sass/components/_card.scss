@@ -6,7 +6,7 @@
   border-radius: 10px;
   background: linear-gradient(180deg, $orange 0%, rgba(0, 0, 0, 1) 205%);
   overflow: hidden;
-  margin: 42px;
+  margin: 40px;
   &__image {
     height: $height_card;
     width: $width_card;
@@ -16,5 +16,11 @@
     position: relative;
     left: 15px;
     bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 1460px) {
+  .card {
+    margin: 35px;
   }
 }

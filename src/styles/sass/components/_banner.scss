@@ -1,17 +1,18 @@
+@use '../utils/variables' as *;
+
 .banner {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 223px;
-  margin: 0 100px 43px 100px;
   border-radius: 25px;
   position: relative;
   overflow: hidden;
   &__image-Home {
-    max-width: 1705px;
+    max-width: $max_width_img;
     position: absolute;
     z-index: 0;
-    top: -465%;
+    top: -1045px;
     filter: brightness(60%);
   }
   &__text-Home {
@@ -19,7 +20,15 @@
     z-index: 1;
   }
   &__image-About {
+    max-width: $max_width_img;
     position: absolute;
-    bottom: -670%;
+    top: -370px;
+    filter: brightness(65%);
+  }
+  &.banner-home {
+    margin: 63px $margin_page 0 $margin_page;
+  }
+  &.banner-about {
+    margin: 44px $margin_page 0 $margin_page;
   }
 }

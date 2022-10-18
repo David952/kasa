@@ -1,20 +1,23 @@
 @use '../utils/variables' as *;
+@use '../utils/mixins' as *;
 
 header {
-  display: flex;
-  justify-content: space-between;
+  @include flex_space_between;
   align-items: center;
-  margin: 40px 55px 60px 90px;
+  margin: 40px $margin_page 0 $margin_page;
 }
 
-.linkActive {
+nav {
+  @include flex_space_between;
+  width: 165px;
+}
+
+.active {
   text-decoration: underline;
   color: $orange;
-  padding-right: 45px;
 }
 
-.linkNotActive {
+.notActive {
   text-decoration: none;
   color: $orange;
-  padding-right: 45px;
 }
