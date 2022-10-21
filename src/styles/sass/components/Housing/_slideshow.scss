@@ -11,15 +11,18 @@
   &__arrows {
     font-size: 70px;
     color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
     &.arrow-left {
       position: absolute;
-      top: 0;
       left: 0;
+      padding-left: 23px;
     }
     &.arrow-right {
       position: absolute;
-      top: 0;
       right: 0;
+      padding-right: 23px;
     }
   }
 }

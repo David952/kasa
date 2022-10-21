@@ -6,6 +6,7 @@
   &__datas {
     @include flex_space_between;
     flex-direction: column;
+    margin-top: 24px;
   }
   &__data-1 {
     @include flex_space_between;
@@ -15,23 +16,28 @@
     align-items: center;
   }
   &__name {
-    width: 97px;
+    width: 80px;
+    margin-right: 10px;
   }
   &__avatar {
-    width: 128px;
-    height: 128px;
+    width: 110px;
+    height: 110px;
     background-color: #c4c4c4;
-    border-radius: 64px;
+    border-radius: 56px;
     position: relative;
     overflow: hidden;
   }
   &__data-2 {
     @include flex_space_between;
+    align-items: center;
+  }
+  &__tags {
+    display: flex;
   }
   &__collapse {
     @include flex_space_between;
-  }
-  &.description {
-    width: 50%;
+    & .description {
+      padding-right: 76px;
+    }
   }
 }

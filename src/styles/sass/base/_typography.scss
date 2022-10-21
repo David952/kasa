@@ -19,13 +19,36 @@
   font-size: $title_link_size;
 }
 
-.collapse__title {
-  font-size: 20px;
+.collapse__title-About {
+  font-size: 24px;
   font-weight: 500;
 }
 
-.collapse__container-text {
+.collapse__title-Housing {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.collapse__container_text-About {
   font-size: 24px;
+}
+
+.collapse__container_text-Housing {
+  font-size: 18px;
+}
+
+.tag {
+  font-size: 14px;
+}
+
+.housing__title-loc {
+  font-size: 18px;
+  color: $orange;
+}
+
+.housing__name {
+  font-size: 18px;
+  color: $orange;
 }
 
 .error {
