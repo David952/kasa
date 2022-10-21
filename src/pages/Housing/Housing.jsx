@@ -4,7 +4,8 @@ import { useLoaderData } from 'react-router-dom';
 import { getHousing } from './housings';
 
 import Header from '../../components/Header';
-import Carousel from '../../components/Housing/Carousel';
+import Carousel from '../../components/Housing/Slideshow';
+import Tag from '../../components/Housing/Tag';
 import Collapse from '../../components/Collapse';
 import Footer from '../../components/Footer';
 
@@ -14,20 +15,12 @@ export function loader({ params }) {
 
 export default function Housing() {
   const housing = useLoaderData();
-  const descriptionTxt = housing.description;
-  const equipmentsTxt = housing.equipments;
 
   return (
     <React.Fragment>
       <Header />
       <main className="housing" key={housing.id}>
-        <Carousel
-          CarouselImg={housing.pictures[0]}
-          CarouselImg2={housing.pictures[1]}
-          CarouselImg3={housing.pictures[2]}
-          CarouselImg4={housing.pictures[3]}
-          CarouselImg5={housing.pictures[4]}
-        />
+        <Carousel CarouselImages={housing.pictures} />
 
         <div className="housing__datas">
           <div className="housing__data-1">
@@ -48,7 +41,9 @@ export default function Housing() {
           </div>
           <div className="housing__data-2">
             <div className="housing__tags">
-              <h1>{housing.tags}</h1>
+              {housing.tags.map((tag) => (
+                <Tag key={tag.toLowerCase()} TagText={tag} />
+              ))}
             </div>
             <div className="housing__rating">
               <h1>{housing.rating}</h1>
@@ -58,13 +53,17 @@ export default function Housing() {
         <div className="housing__collapse">
           <Collapse
             CollapseClass="collapse description"
+            CollapseClassTitle="collapse__title-Housing"
             CollapseTitle="Description"
-            CollapseText={descriptionTxt}
+            CollapseClassText="collapse__container_text-Housing"
+            CollapseText={housing.description}
           />
           <Collapse
             CollapseClass="collapse equipments"
+            CollapseClassTitle="collapse__title-Housing"
             CollapseTitle="Équipements"
-            CollapseText={equipmentsTxt}
+            CollapseClassText="collapse__container_text-Housing"
+            CollapseText={housing.equipments}
           />
         </div>
       </main>

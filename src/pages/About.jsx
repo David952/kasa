@@ -45,7 +45,9 @@ function About() {
               <Collapse
                 key={index}
                 CollapseClass="collapse"
+                CollapseClassTitle="collapse__title-About"
                 CollapseTitle={data.AboutTitle}
+                CollapseClassText="collapse__container_text-About"
                 CollapseText={data.AboutText}
               />
             );
