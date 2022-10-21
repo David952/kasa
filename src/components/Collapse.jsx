@@ -9,14 +9,14 @@ function Collapse(props) {
         className={`collapse__title_chevron ${isOpen ? 'open' : 'closed'}`}
         onClick={() => setOpen(!isOpen)}
       >
-        <h1 className="collapse__title">{props.CollapseTitle}</h1>
+        <h1 className={props.CollapseClassTitle}>{props.CollapseTitle}</h1>
         <span
           className={`collapse__chevron ${isOpen ? 'open' : 'closed'}`}
           onClick={() => setOpen(!isOpen)}
         ></span>
       </div>
       <div className={`collapse__container ${!isOpen ? 'closed' : 'open'}`}>
-        <p className="collapse__container-text">{props.CollapseText}</p>
+        <p className={props.CollapseClassText}>{props.CollapseText}</p>
       </div>
     </div>
   );
