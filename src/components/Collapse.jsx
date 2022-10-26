@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 function Collapse(props) {
   const [isOpen, setOpen] = useState(false);
+  const isString = typeof props.CollapseText === 'string';
 
   return (
     <div className={props.CollapseClass}>
@@ -16,7 +17,15 @@ function Collapse(props) {
         ></span>
       </div>
       <div className={`collapse__container ${!isOpen ? 'closed' : 'open'}`}>
-        <p className={props.CollapseClassText}>{props.CollapseText}</p>
+        {isString ? (
+          <p className={props.CollapseClassText}>{props.CollapseText}</p>
+        ) : (
+          props.CollapseText.map((text, index) => (
+            <p key={index} className={props.CollapseClassText}>
+              {text}
+            </p>
+          ))
+        )}
       </div>
     </div>
   );
