@@ -35,7 +35,11 @@ export default function Housing() {
                 <p>{housing.host.name}</p>
               </div>
               <div className="housing__avatar">
-                <img src={housing.host.picture} alt="Visage" />
+                <img
+                  src={housing.host.picture}
+                  className={'housing__avatar-image'}
+                  alt="Visage"
+                />
               </div>
             </div>
           </div>
