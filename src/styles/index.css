@@ -416,16 +416,22 @@ footer p {
           align-items: center;
 }
 .housing__name {
-  width: 80px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
   margin-right: 10px;
 }
 .housing__avatar {
-  width: 110px;
-  height: 110px;
+  width: 64px;
+  height: 64px;
   background-color: #c4c4c4;
-  border-radius: 56px;
+  border-radius: 32px;
   position: relative;
   overflow: hidden;
+}
+.housing__avatar-image {
+  max-width: 100%;
+  height: auto;
 }
 .housing__data-2 {
   display: -webkit-box;
