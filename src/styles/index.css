@@ -432,19 +432,17 @@ footer p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   margin-top: 24px;
 }
 .housing__data-1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 24px;
 }
 .housing__name-avatar {
   display: -webkit-box;
@@ -476,17 +474,26 @@ footer p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 80px;
 }
 .housing__tags {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 20px;
+}
+.housing__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 21px;
 }
 .housing__collapse {
   display: grid;
@@ -516,6 +523,16 @@ footer p {
   }
   .housing__datas {
     margin-top: 15px;
+  }
+  .housing__avatar {
+    height: 32px;
+    width: 32px;
+  }
+  .housing__data-2 {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
   .housing__collapse {
     grid-template-columns: none;
@@ -648,6 +665,9 @@ footer p {
   }
   .housing__title-loc h1 {
     font-weight: 500;
+  }
+  .housing__name {
+    font-size: 12px;
   }
   .tag {
     font-size: 11px;
@@ -883,4 +903,8 @@ footer p {
   width: 36px;
   font-size: 42px;
   color: #e3e3e3;
+}
+
+.active-star {
+  color: #ff6060;
 }

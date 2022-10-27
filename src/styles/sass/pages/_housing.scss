@@ -5,11 +5,12 @@
   margin: 20px $margin_page 0 $margin_page;
   &__datas {
     @include flex_space_between;
-    flex-direction: column;
     margin-top: 24px;
   }
   &__data-1 {
-    @include flex_space_between;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
   }
   &__name-avatar {
     display: flex;
@@ -26,16 +27,24 @@
     border-radius: 32px;
     position: relative;
     overflow: hidden;
+
     &-image {
       @include image-responsive;
     }
   }
   &__data-2 {
-    @include flex_space_between;
+    display: flex;
     align-items: center;
+    flex-direction: column;
+    margin-bottom: 80px;
   }
   &__tags {
     display: flex;
+    margin-top: 20px;
+  }
+  &__rating {
+    display: flex;
+    margin-top: 21px;
   }
   &__collapse {
     display: grid;
@@ -52,7 +61,6 @@
       border-radius: 5px;
       background-color: $grey;
     }
-
     & .equipments {
       overflow: hidden;
       border-radius: 5px;
@@ -66,6 +74,13 @@
     margin: 27px $margin_mobile 0 $margin_mobile;
     &__datas {
       margin-top: 15px;
+    }
+    &__avatar {
+      height: 32px;
+      width: 32px;
+    }
+    &__data-2 {
+      flex-direction: row-reverse;
     }
     &__collapse {
       grid-template-columns: none;
