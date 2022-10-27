@@ -5,7 +5,7 @@ function Collapse(props) {
   const isString = typeof props.CollapseText === 'string';
 
   return (
-    <div className={props.CollapseClass}>
+    <div className={`${props.CollapseClass}  ${isOpen ? 'open' : 'closed'}`}>
       <div
         className={`collapse__title_chevron ${isOpen ? 'open' : 'closed'}`}
         onClick={() => setOpen(!isOpen)}
