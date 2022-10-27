@@ -6,6 +6,7 @@ import { getHousing } from './housings';
 import Header from '../../components/Header';
 import Carousel from '../../components/Housing/Slideshow';
 import Tag from '../../components/Housing/Tag';
+import Star from '../../components/Housing/Star';
 import Collapse from '../../components/Collapse';
 import Footer from '../../components/Footer';
 
@@ -50,7 +51,7 @@ export default function Housing() {
               ))}
             </div>
             <div className="housing__rating">
-              <h1>{housing.rating}</h1>
+              <Star StarRating={housing.rating} />
             </div>
           </div>
         </div>
