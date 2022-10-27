@@ -31,6 +31,13 @@ export default function Housing() {
                 <p>{housing.location}</p>
               </div>
             </div>
+            <div className="housing__tags">
+              {housing.tags.map((tag) => (
+                <Tag key={tag.toLowerCase()} TagText={tag} />
+              ))}
+            </div>
+          </div>
+          <div className="housing__data-2">
             <div className="housing__name-avatar">
               <div className="housing__name">
                 <p>{housing.host.name}</p>
@@ -42,13 +49,6 @@ export default function Housing() {
                   alt="Visage"
                 />
               </div>
-            </div>
-          </div>
-          <div className="housing__data-2">
-            <div className="housing__tags">
-              {housing.tags.map((tag) => (
-                <Tag key={tag.toLowerCase()} TagText={tag} />
-              ))}
             </div>
             <div className="housing__rating">
               <Star StarRating={housing.rating} />
