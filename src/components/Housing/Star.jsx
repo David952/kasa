@@ -1,11 +1,16 @@
 export default function Star(props) {
   return (
     <>
-      {props.StarRating.map((star, index) => (
-        <div className="star" key={index}>
-          <span>&#9733;</span>
-        </div>
-      ))}
+      {[...Array(5)].map((x, index) => {
+        const _index = ++index;
+        return (
+          <div className="star" key={_index}>
+            <span className={_index <= props.StarRating ? 'active-star' : ''}>
+              &#9733;
+            </span>
+          </div>
+        );
+      })}
     </>
   );
 }
