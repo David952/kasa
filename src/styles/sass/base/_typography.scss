@@ -66,3 +66,46 @@
     font-size: $title_link_size;
   }
 }
+
+@media screen and (max-width: 375px) {
+  nav {
+    font-size: 12px;
+  }
+  .banner__text-Home {
+    font-size: 24px;
+    width: 217px;
+    margin-right: 122px;
+    margin-left: 36px;
+    letter-spacing: 1px;
+  }
+  .collapse__title-About {
+    font-size: 14px;
+  }
+  .housing__title-loc {
+    font-size: 14px;
+    h1 {
+      font-weight: 500;
+    }
+  }
+  .tag {
+    font-size: 11px;
+  }
+  .collapse__title-Housing {
+    font-size: 14px;
+  }
+  .collapse__container_text-Housing {
+    font-size: 12px;
+  }
+  .error {
+    &__number {
+      font-size: 120px;
+    }
+    &__text {
+      font-size: 18px;
+      line-height: 25px;
+    }
+    &__link {
+      font-size: 14px;
+    }
+  }
+}

@@ -19,8 +19,19 @@
   }
 }
 
-@media screen and (max-width: 1460px) {
+@media screen and (min-width: 376px) and (max-width: 1460px) {
   .card {
     margin: 35px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .card {
+    height: 255px;
+    margin: 0;
+    margin-bottom: 20px;
+    &__image {
+      height: 255px;
+    }
   }
 }

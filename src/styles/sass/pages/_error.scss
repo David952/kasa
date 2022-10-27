@@ -12,3 +12,14 @@
     margin-bottom: 159px;
   }
 }
+
+@media screen and (max-width: 375px) {
+  .error {
+    &__text {
+      margin: 11px 58px 133px 90px;
+    }
+    &__link {
+      margin-bottom: 50px;
+    }
+  }
+}

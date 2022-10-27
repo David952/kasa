@@ -26,3 +26,19 @@
     }
   }
 }
+
+@media screen and (max-width: 375px) {
+  .carousel {
+    height: 224px;
+    border-radius: 10px;
+    &__arrows {
+      font-size: 26px;
+    }
+    & .arrow-left {
+      padding-left: 5px;
+    }
+    & .arrow-right {
+      padding-right: 5px;
+    }
+  }
+}

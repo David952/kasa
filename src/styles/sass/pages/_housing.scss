@@ -38,9 +38,39 @@
     display: flex;
   }
   &__collapse {
-    @include flex_space_between;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    grid-column-gap: 76px;
+    grid-row-gap: 5px;
+    & .closed {
+      max-height: 35px;
+    }
     & .description {
-      padding-right: 76px;
+      overflow: hidden;
+      border-radius: 5px;
+      background-color: $grey;
+    }
+
+    & .equipments {
+      overflow: hidden;
+      border-radius: 5px;
+      background-color: $grey;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .housing {
+    margin: 27px $margin_mobile 0 $margin_mobile;
+    &__datas {
+      margin-top: 15px;
+    }
+    &__collapse {
+      grid-template-columns: none;
+      grid-template-rows: repeat(2, 1fr);
+      grid-row-gap: 20px;
     }
   }
 }

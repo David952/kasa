@@ -21,3 +21,17 @@ nav {
   text-decoration: none;
   color: $orange;
 }
+
+@media screen and (max-width: 375px) {
+  header {
+    margin: $margin_mobile $margin_mobile 0 $margin_mobile;
+  }
+  .logo img {
+    height: 47px;
+    width: 145px;
+  }
+  nav {
+    width: 140px;
+    text-transform: uppercase;
+  }
+}

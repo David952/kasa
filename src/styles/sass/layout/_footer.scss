@@ -15,3 +15,9 @@ footer {
     font-size: 17px;
   }
 }
+
+@media screen and (max-width: 375px) {
+  footer {
+    margin-top: 50px;
+  }
+}

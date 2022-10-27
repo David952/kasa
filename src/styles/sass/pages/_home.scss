@@ -7,3 +7,20 @@
   border-radius: 25px;
   background-color: $grey;
 }
+
+@media screen and (min-width: 376px) and (max-width: 1460px) {
+  .card {
+    margin: 35px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .home {
+    background-color: $white;
+    margin: 22px 19px 0 21px;
+  }
+  .card {
+    height: 255px;
+    margin: 0;
+  }
+}
