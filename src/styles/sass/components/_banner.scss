@@ -12,6 +12,8 @@
   &__image-Home {
     @include image-responsive;
     filter: brightness(60%);
+    position: relative;
+    top: 75px;
   }
   &__text-Home {
     position: absolute;
@@ -20,6 +22,8 @@
   &__image-About {
     @include image-responsive;
     filter: brightness(80%);
+    position: relative;
+    top: 40px;
   }
   &.banner-home {
     margin: 63px $margin_page 0 $margin_page;

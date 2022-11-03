@@ -15,6 +15,7 @@
   &__name-avatar {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
   }
   &__name {
     width: min-content;
@@ -34,9 +35,7 @@
   }
   &__data-2 {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    margin-bottom: 80px;
   }
   &__tags {
     display: flex;
@@ -44,15 +43,13 @@
   }
   &__rating {
     display: flex;
-    margin-top: 21px;
+    margin-top: 40px;
   }
   &__collapse {
     display: grid;
     overflow: hidden;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 1fr;
-    grid-column-gap: 76px;
-    grid-row-gap: 5px;
     & .closed {
       max-height: 35px;
     }
@@ -60,6 +57,7 @@
       overflow: hidden;
       border-radius: 5px;
       background-color: $grey;
+      margin-right: 76px;
     }
     & .equipments {
       overflow: hidden;

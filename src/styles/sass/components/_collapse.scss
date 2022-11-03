@@ -3,7 +3,6 @@
 
 .collapse {
   margin-bottom: 33px;
-  flex: 1;
   &__title_chevron {
     @include flex_space_between;
     align-items: center;
@@ -29,7 +28,10 @@
   &__container {
     border-radius: 5px;
     padding: 30px 12px 27px 20px;
-    & .closed {
+    &.open {
+      background-color: $grey;
+    }
+    &.closed {
       overflow: hidden;
       max-height: 0;
     }

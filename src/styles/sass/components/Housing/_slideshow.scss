@@ -5,8 +5,19 @@
   position: relative;
   overflow: hidden;
   border-radius: 25px;
-  &__image img {
-    width: 100%;
+  &__container {
+    &-image {
+      width: 100%;
+      position: relative;
+      top: -2px;
+    }
+    &-text {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $white;
+    }
   }
   &__arrows {
     font-size: 70px;
