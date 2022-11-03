@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 
 import { getHousing } from './housings';
 
@@ -10,12 +10,20 @@ import Star from '../../components/Housing/Star';
 import Collapse from '../../components/Collapse';
 import Footer from '../../components/Footer';
 
+import Error from '../Error';
+
 export function loader({ params }) {
   return getHousing(params.housingId);
 }
 
 export default function Housing() {
   const housing = useLoaderData();
+  let navigate = useNavigate();
+
+  if (housing.id) {
+  } else {
+    navigate(<Error />);
+  }
 
   return (
     <React.Fragment>
