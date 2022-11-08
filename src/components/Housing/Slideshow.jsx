@@ -35,7 +35,7 @@ export default function Carousel(props) {
                   alt="Logement dans un carrousel"
                 />
                 <p className="carousel__container-text">
-                  {index + 1} / {image}
+                  {index + 1} / {length}
                 </p>
               </>
             )}
