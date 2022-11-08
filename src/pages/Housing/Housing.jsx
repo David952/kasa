@@ -1,16 +1,14 @@
-import React from 'react';
-import { useLoaderData, useNavigate } from 'react-router-dom';
+import { useLoaderData, Navigate } from 'react-router-dom';
 
 import { getHousing } from './housings';
 
 import Header from '../../components/Header';
 import Carousel from '../../components/Housing/Slideshow';
+import Avatar from '../../components/Housing/Avatar';
 import Tag from '../../components/Housing/Tag';
 import Star from '../../components/Housing/Star';
 import Collapse from '../../components/Collapse';
 import Footer from '../../components/Footer';
-
-import Error from '../Error';
 
 export function loader({ params }) {
   return getHousing(params.housingId);
@@ -18,15 +16,13 @@ export function loader({ params }) {
 
 export default function Housing() {
   const housing = useLoaderData();
-  let navigate = useNavigate();
 
-  if (housing.id) {
-  } else {
-    navigate(<Error />);
+  if (!housing) {
+    return <Navigate to="/404" replace={true}></Navigate>;
   }
 
   return (
-    <React.Fragment>
+    <>
       <Header />
       <main className="housing" key={housing.id}>
         <Carousel CarouselImages={housing.pictures} />
@@ -41,7 +37,7 @@ export default function Housing() {
             </div>
             <div className="housing__tags">
               {housing.tags.map((tag) => (
-                <Tag key={tag.toLowerCase()} TagText={tag} />
+                <Tag key={tag} TagText={tag} />
               ))}
             </div>
           </div>
@@ -50,13 +46,7 @@ export default function Housing() {
               <div className="housing__name">
                 <p>{housing.host.name}</p>
               </div>
-              <div className="housing__avatar">
-                <img
-                  src={housing.host.picture}
-                  className={'housing__avatar-image'}
-                  alt="Visage"
-                />
-              </div>
+              <Avatar PictureSrc={housing.host.picture} />
             </div>
             <div className="housing__rating">
               <Star StarRating={housing.rating} />
@@ -81,6 +71,6 @@ export default function Housing() {
         </div>
       </main>
       <Footer />
-    </React.Fragment>
+    </>
   );
 }
