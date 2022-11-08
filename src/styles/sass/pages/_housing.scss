@@ -72,6 +72,7 @@
     margin: 27px $margin_mobile 0 $margin_mobile;
     &__datas {
       margin-top: 15px;
+      flex-direction: column;
     }
     &__avatar {
       height: 32px;
@@ -79,11 +80,19 @@
     }
     &__data-2 {
       flex-direction: row-reverse;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+    &__rating {
+      margin-top: 0;
     }
     &__collapse {
       grid-template-columns: none;
       grid-template-rows: repeat(2, 1fr);
       grid-row-gap: 20px;
+      & .description {
+        margin-right: 0;
+      }
     }
   }
 }
