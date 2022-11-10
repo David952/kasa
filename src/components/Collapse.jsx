@@ -16,7 +16,11 @@ function Collapse(props) {
           onClick={() => setOpen(!isOpen)}
         ></span>
       </div>
-      <div className={`collapse__container ${!isOpen ? 'closed' : 'open'}`}>
+      <div
+        className={`${props.CollapseClassContainer} ${
+          !isOpen ? 'closed' : 'open'
+        }`}
+      >
         {isString ? (
           <p className={props.CollapseClassText}>{props.CollapseText}</p>
         ) : (
