@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useLoaderData, Navigate } from 'react-router-dom';
 
 import { getHousing } from './housings';
@@ -15,6 +16,10 @@ export function loader({ params }) {
 }
 
 export default function Housing() {
+  useEffect(() => {
+    document.title = 'Logement';
+  }, []);
+
   const housing = useLoaderData();
 
   if (!housing) {
@@ -36,8 +41,8 @@ export default function Housing() {
               </div>
             </div>
             <div className="housing__tags">
-              {housing.tags.map((tag) => (
-                <Tag key={tag} TagText={tag} />
+              {housing.tags.map((tag, index) => (
+                <Tag key={index} TagText={tag} />
               ))}
             </div>
           </div>
@@ -58,14 +63,16 @@ export default function Housing() {
             CollapseClass="collapse description"
             CollapseClassTitle="collapse__title-Housing"
             CollapseTitle="Description"
-            CollapseClassText="collapse__container_text-Housing"
+            CollapseClassContainer="collapse__container-Housing"
+            CollapseClassText="collapse__container-Housing--text"
             CollapseText={housing.description}
           />
           <Collapse
             CollapseClass="collapse equipments"
             CollapseClassTitle="collapse__title-Housing"
             CollapseTitle="Équipements"
-            CollapseClassText="collapse__container_text-Housing"
+            CollapseClassContainer="collapse__container-Housing"
+            CollapseClassText="collapse__container-Housing--text"
             CollapseText={housing.equipments}
           />
         </div>

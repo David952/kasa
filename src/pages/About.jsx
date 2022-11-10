@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Collapse from '../components/Collapse';
@@ -6,6 +8,10 @@ import Footer from '../components/Footer';
 import image from '../assets/Banner/About/kalen-emsley-Bkci_8qcdvQ-unsplash.png';
 
 function About() {
+  useEffect(() => {
+    document.title = 'À Propos';
+  }, []);
+
   const dataCollapse = [
     {
       AboutTitle: 'Fiabilité',
@@ -44,10 +50,11 @@ function About() {
             return (
               <Collapse
                 key={index}
-                CollapseClass="collapse"
+                CollapseClass="collapse collapse-About"
                 CollapseClassTitle="collapse__title-About"
                 CollapseTitle={data.AboutTitle}
-                CollapseClassText="collapse__container_text-About"
+                CollapseClassContainer="collapse__container-About"
+                CollapseClassText="collapse__container-About--text"
                 CollapseText={data.AboutText}
               />
             );

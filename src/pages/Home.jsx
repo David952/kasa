@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { getHousings } from './Housing/housings';
 
@@ -14,6 +15,10 @@ export function loader() {
 }
 
 function Home() {
+  useEffect(() => {
+    document.title = 'Kasa';
+  }, []);
+
   const { housings } = useLoaderData();
 
   return (
