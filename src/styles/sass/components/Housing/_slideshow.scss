@@ -21,12 +21,11 @@
       bottom: 0;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: $white;
     }
   }
   &__arrows {
     font-size: 70px;
-    color: white;
+    color: $white;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -43,6 +42,15 @@
   }
 }
 
+@keyframes imageEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 375px) {
   .carousel {
     height: 224px;
@@ -56,14 +64,11 @@
     & .arrow-right {
       padding-right: 5px;
     }
-  }
-}
-
-@keyframes imageEffect {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+    &__container {
+      &-image {
+        min-height: 224px;
+        object-fit: cover;
+      }
+    }
   }
 }

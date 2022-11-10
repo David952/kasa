@@ -12,6 +12,14 @@
     flex-direction: column;
     margin-bottom: 24px;
   }
+  &__tags {
+    display: flex;
+    margin-top: 20px;
+  }
+  &__data-2 {
+    display: flex;
+    flex-direction: column;
+  }
   &__name-avatar {
     display: flex;
     align-items: center;
@@ -28,18 +36,9 @@
     border-radius: 32px;
     position: relative;
     overflow: hidden;
-
     &-image {
       @include image-responsive;
     }
-  }
-  &__data-2 {
-    display: flex;
-    flex-direction: column;
-  }
-  &__tags {
-    display: flex;
-    margin-top: 20px;
   }
   &__rating {
     display: flex;
@@ -55,33 +54,58 @@
     }
     & .description {
       overflow: hidden;
-      border-radius: 5px;
       background-color: $grey;
       margin-right: 76px;
     }
     & .equipments {
       overflow: hidden;
-      border-radius: 5px;
       background-color: $grey;
+    }
+    .collapse {
+      border-radius: 10px;
+      &__container-Housing {
+        border-radius: 10px;
+        padding: 30px 12px 27px 20px;
+      }
     }
   }
 }
 
 @media screen and (max-width: 375px) {
+  h1 {
+    margin: 0;
+  }
   .housing {
     margin: 27px $margin_mobile 0 $margin_mobile;
     &__datas {
-      margin-top: 15px;
+      margin-top: 0;
       flex-direction: column;
+    }
+    &__title-loc {
+      margin-top: 15px;
+      & h1 {
+        margin-bottom: 5px;
+      }
+    }
+    &__tags {
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+    & .tag {
+      height: 18px;
+      border-radius: 5px;
+      padding: 2px 30px 1px 29px;
+      margin-top: 10px;
+    }
+    &__data-2 {
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 22px;
     }
     &__avatar {
       height: 32px;
       width: 32px;
-    }
-    &__data-2 {
-      flex-direction: row-reverse;
-      align-items: flex-end;
-      justify-content: space-between;
     }
     &__rating {
       margin-top: 0;
@@ -89,9 +113,15 @@
     &__collapse {
       grid-template-columns: none;
       grid-template-rows: repeat(2, 1fr);
-      grid-row-gap: 20px;
       & .description {
         margin-right: 0;
+        margin-bottom: 20px;
+      }
+      .collapse {
+        border-radius: 5px;
+        &__container-Housing {
+          padding: 23px 7px 5px 11px;
+        }
       }
     }
   }

@@ -11,3 +11,11 @@
 .active-star {
   color: $orange;
 }
+
+@media screen and (max-width: 375px) {
+  .star {
+    height: 18px;
+    width: 18px;
+    font-size: 22px;
+  }
+}

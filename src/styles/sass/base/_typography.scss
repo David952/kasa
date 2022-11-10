@@ -29,20 +29,26 @@
   font-weight: 500;
 }
 
-.collapse__container_text-About {
+.collapse__container-About--text {
+  color: $orange;
   font-size: 24px;
+  line-height: 34px;
 }
 
-.collapse__container_text-Housing {
+.collapse__container-Housing--text {
+  color: $orange;
   font-size: 18px;
+  line-height: 27px;
 }
 
 .carousel__container-text {
   font-size: 18px;
+  color: $white;
 }
 
 .tag {
   font-size: 14px;
+  color: $white;
 }
 
 .housing__title-loc {
@@ -85,6 +91,20 @@
   .collapse__title-About {
     font-size: 14px;
   }
+  .collapse__container-About--text {
+    font-size: 12px;
+    line-height: 17px;
+  }
+  .collapse__title-Housing {
+    font-size: 14px;
+  }
+  .collapse__container-Housing--text {
+    font-size: 12px;
+    line-height: 17px;
+  }
+  .carousel__container-text {
+    display: none;
+  }
   .housing__title-loc {
     font-size: 14px;
     h1 {
@@ -96,12 +116,6 @@
   }
   .tag {
     font-size: 11px;
-  }
-  .collapse__title-Housing {
-    font-size: 14px;
-  }
-  .collapse__container_text-Housing {
-    font-size: 12px;
   }
   .error {
     &__number {

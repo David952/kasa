@@ -35,6 +35,12 @@
 
 @media screen and (max-width: 375px) {
   .banner {
+    &__image-Home {
+      top: 0;
+    }
+    &__image-About {
+      top: 0;
+    }
     border-radius: 10px;
     &.banner-home {
       height: 111px;

@@ -2,7 +2,6 @@
 @use '../utils/mixins' as *;
 
 .collapse {
-  margin-bottom: 33px;
   &__title_chevron {
     @include flex_space_between;
     align-items: center;
@@ -23,24 +22,6 @@
     &.open {
       margin-bottom: 12px;
       transform: rotate(314deg);
-    }
-  }
-  &__container {
-    border-radius: 5px;
-    padding: 30px 12px 27px 20px;
-    &.open {
-      background-color: $grey;
-    }
-    &.closed {
-      overflow: hidden;
-      max-height: 0;
-    }
-    &_text-About {
-      color: $orange;
-      padding: 25px 27px 19px 18px;
-    }
-    &_text-Housing {
-      color: $orange;
     }
   }
 }
