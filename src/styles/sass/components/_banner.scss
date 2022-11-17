@@ -26,17 +26,23 @@
     top: 40px;
   }
   &.banner-home {
-    margin: 63px $margin_page 0 $margin_page;
+    margin-top: 63px;
   }
   &.banner-about {
-    margin: 44px $margin_page 0 $margin_page;
+    margin-top: 44px;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 576px) {
   .banner {
+    justify-content: left;
     &__image-Home {
       top: 0;
+    }
+    &__text-Home {
+      width: 217px;
+      height: 48px;
+      margin-left: 16px;
     }
     &__image-About {
       top: 0;
@@ -44,7 +50,7 @@
     border-radius: 10px;
     &.banner-home {
       height: 111px;
-      margin: 16px $margin_mobile 0 $margin_mobile;
+      margin-top: 16px;
     }
     &.banner-about {
       height: 223px;

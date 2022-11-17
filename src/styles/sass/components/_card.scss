@@ -6,27 +6,61 @@
   border-radius: 10px;
   background: linear-gradient(180deg, $orange 0%, rgba(0, 0, 0, 1) 205%);
   overflow: hidden;
-  margin: 42px;
+  margin: 42px 30px 0 40px;
   &__image {
-    height: $height_card;
-    width: $width_card;
-    object-fit: cover;
+    position: relative;
+    & img {
+      height: $height_card;
+      width: $width_card;
+      object-fit: cover;
+    }
+    & span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 0px -115px 60px -25px rgba(0, 0, 0, 0.15);
+      }
+    }
   }
   &__title {
     position: relative;
     left: 15px;
-    bottom: 50px;
+    bottom: 65px;
   }
 }
 
-@media screen and (min-width: 376px) and (max-width: 1460px) {
+@media screen and (min-width: 1366px) and (max-width: 1439px) {
   .card {
-    margin: 36px;
+    margin: 24px 24px 0 24px;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 577px) and (max-width: 911px) {
   .card {
+    width: 280px;
+    height: 280px;
+    & img {
+      width: 280px;
+      height: 280px;
+    }
+    &__title {
+      padding-right: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card {
+    width: 335px;
     height: 255px;
     margin: 0;
     margin-bottom: 20px;

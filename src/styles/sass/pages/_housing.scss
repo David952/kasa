@@ -2,7 +2,7 @@
 @use '../utils/mixins' as *;
 
 .housing {
-  margin: 20px $margin_page 0 $margin_page;
+  margin: 20px 0 0 0;
   &__datas {
     @include flex_space_between;
     margin-top: 24px;
@@ -42,41 +42,57 @@
   }
   &__rating {
     display: flex;
-    margin-top: 40px;
+    margin-top: 14px;
+    width: 196px;
+    height: 39px;
   }
   &__collapse {
     display: grid;
     overflow: hidden;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 1fr;
-    & .closed {
-      max-height: 35px;
-    }
+    gap: 76px;
     & .description {
       overflow: hidden;
-      background-color: $grey;
-      margin-right: 76px;
+      & .open {
+        display: block;
+      }
     }
     & .equipments {
       overflow: hidden;
-      background-color: $grey;
+      & .open {
+        display: block;
+      }
     }
     .collapse {
       border-radius: 10px;
       &__container-Housing {
+        background-color: $grey;
         border-radius: 10px;
         padding: 30px 12px 27px 20px;
+        display: none;
       }
     }
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 577px) and (max-width: 1280px) {
+  .housing {
+    &__collapse {
+      margin-top: 20px;
+    }
+    &__rating {
+      margin-top: 38px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
   h1 {
     margin: 0;
   }
   .housing {
-    margin: 27px $margin_mobile 0 $margin_mobile;
+    margin-top: 27px;
     &__datas {
       margin-top: 0;
       flex-direction: column;
@@ -108,11 +124,14 @@
       width: 32px;
     }
     &__rating {
+      display: flex;
+      align-items: center;
       margin-top: 0;
     }
     &__collapse {
       grid-template-columns: none;
       grid-template-rows: repeat(2, 1fr);
+      gap: 20px;
       & .description {
         margin-right: 0;
         margin-bottom: 20px;

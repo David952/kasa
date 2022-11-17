@@ -5,17 +5,19 @@
   align-items: center;
   height: 36px;
   width: 36px;
-  font-size: 42px;
+  font-size: 44px;
   color: #e3e3e3;
+  margin-right: 4px;
 }
 .active-star {
   color: $orange;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 576px) {
   .star {
     height: 18px;
     width: 18px;
     font-size: 22px;
+    margin-right: 2px;
   }
 }

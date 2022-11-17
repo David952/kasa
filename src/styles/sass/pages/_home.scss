@@ -3,24 +3,24 @@
 .home {
   display: flex;
   flex-wrap: wrap;
-  margin: 43px $margin_page 0 $margin_page;
+
+  margin-top: 43px;
+  padding-bottom: 36px;
   border-radius: 25px;
   background-color: $grey;
 }
 
-@media screen and (min-width: 376px) and (max-width: 1460px) {
-  .card {
-    margin: 35px;
+@media screen and (min-width: 577px) and (max-width: 1023px) {
+  .home {
+    background-color: $white;
+    margin-top: 22px;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 576px) {
   .home {
+    justify-content: center;
     background-color: $white;
-    margin: 22px 19px 0 21px;
-  }
-  .card {
-    height: 255px;
-    margin: 0;
+    margin-top: 22px;
   }
 }

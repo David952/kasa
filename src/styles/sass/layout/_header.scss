@@ -4,12 +4,22 @@
 header {
   @include flex_space_between;
   align-items: center;
-  margin: 40px $margin_page 0 $margin_page;
+  height: 68px;
+  margin-top: 40px;
+}
+
+.logo img {
+  width: 210px;
+  height: 68px;
+  object-fit: cover;
 }
 
 nav {
   @include flex_space_between;
-  width: 165px;
+  align-items: center;
+  width: 309px;
+  height: 34px;
+  padding-left: 70px;
 }
 
 .active {
@@ -22,9 +32,18 @@ nav {
   color: $orange;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 577px) and (max-width: 1023px) {
+  .home {
+    justify-content: center;
+    background-color: $white;
+    margin-top: 22px;
+  }
+}
+
+@media screen and (max-width: 576px) {
   header {
-    margin: $margin_mobile $margin_mobile 0 $margin_mobile;
+    height: 47px;
+    margin-top: 20px;
   }
   .logo img {
     height: 47px;
@@ -32,6 +51,7 @@ nav {
   }
   nav {
     width: 140px;
+    padding-left: 0;
     text-transform: uppercase;
   }
 }

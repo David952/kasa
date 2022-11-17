@@ -1,7 +1,28 @@
+@use '../utils/variables' as *;
+
 *,
 :before,
 :after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.section__margin {
+  margin-left: $margin_page;
+  margin-right: $margin_page;
+}
+
+@media screen and (min-width: 577px) and (max-width: 1023px) {
+  .section__margin {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section__margin {
+    margin-left: $margin_mobile;
+    margin-right: $margin_mobile;
+  }
 }
