@@ -39,18 +39,18 @@ function About() {
     <>
       <Header />
       <Banner
-        BannerClass="banner banner-about"
+        BannerClass="banner banner-about section__margin"
         BannerClassImage="banner__image-About"
         img={image}
         alt="Montagne"
       />
-      <main className="about">
+      <main className="about section__margin">
         {dataCollapse &&
           dataCollapse.map((data, index) => {
             return (
               <Collapse
                 key={index}
-                CollapseClass="collapse collapse-About"
+                CollapseClass="collapse collapse-About section__margin"
                 CollapseClassTitle="collapse__title-About"
                 CollapseTitle={data.AboutTitle}
                 CollapseClassContainer="collapse__container-About"

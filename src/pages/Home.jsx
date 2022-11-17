@@ -25,14 +25,14 @@ function Home() {
     <>
       <Header />
       <Banner
-        BannerClass="banner banner-home"
+        BannerClass="banner banner-home section__margin"
         BannerClassImage="banner__image-Home"
         img={image}
         alt="Bord de falaise"
         BannerClassText="banner__text-Home"
         BannerText="Chez vous, partout et ailleurs"
       />
-      <main className="home">
+      <main className="home section__margin">
         {housings &&
           housings.map((housing) => {
             return <Card housing={housing} key={housing.id} />;

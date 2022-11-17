@@ -29,16 +29,14 @@ export default function Housing() {
   return (
     <>
       <Header />
-      <main className="housing" key={housing.id}>
+      <main className="housing section__margin" key={housing.id}>
         <Carousel CarouselImages={housing.pictures} />
 
         <div className="housing__datas">
           <div className="housing__data-1">
             <div className="housing__title-loc">
               <h1>{housing.title}</h1>
-              <div>
-                <p>{housing.location}</p>
-              </div>
+              <p>{housing.location}</p>
             </div>
             <div className="housing__tags">
               {housing.tags.map((tag, index) => (
