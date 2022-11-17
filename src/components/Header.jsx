@@ -6,7 +6,7 @@ function Header() {
   const notActive = 'notActive';
 
   return (
-    <header>
+    <header className="section__margin">
       <NavLink to="/" className="logo">
         <img src={logo} alt="Logo Kasa"></img>
       </NavLink>
