@@ -50,7 +50,7 @@ function About() {
             return (
               <Collapse
                 key={index}
-                CollapseClass="collapse collapse-About section__margin"
+                CollapseClass="collapse collapse-About"
                 CollapseClassTitle="collapse__title-About"
                 CollapseTitle={data.AboutTitle}
                 CollapseClassContainer="collapse__container-About"
