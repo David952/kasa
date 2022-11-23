@@ -400,7 +400,6 @@ footer {
           flex-direction: column;
   background-color: #000000;
   color: #ffffff;
-  margin-top: 100px;
   height: 209px;
 }
 footer img {
@@ -410,12 +409,16 @@ footer img {
      object-fit: cover;
 }
 footer p {
-  margin-top: 30px;
+  position: relative;
+  top: 45px;
 }
 
 @media screen and (max-width: 576px) {
   footer {
-    margin-top: 50px;
+    padding-bottom: 30px;
+  }
+  footer p {
+    top: 26px;
   }
 }
 .home {
@@ -425,7 +428,8 @@ footer p {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 43px;
-  padding-bottom: 36px;
+  margin-bottom: 60px;
+  padding-bottom: 50px;
   border-radius: 25px;
   background-color: #f6f6f6;
 }
@@ -442,11 +446,12 @@ footer p {
         -ms-flex-pack: center;
             justify-content: center;
     background-color: #ffffff;
+    padding-bottom: 0;
     margin-top: 22px;
   }
 }
 .about {
-  margin: 31px 109px 0 108px;
+  margin: 31px 109px 200px 108px;
 }
 
 .collapse-About {
@@ -468,12 +473,19 @@ footer p {
 }
 
 @media screen and (max-width: 576px) {
-  .collapse-About {
+  .about {
+    margin-top: 20px;
+    margin-bottom: 168px;
+  }
+  .about .collapse-About {
     margin-bottom: 20px;
+  }
+  .collapse__container-About--text {
+    padding: 17px 6px 50px 12px;
   }
 }
 .housing {
-  margin: 20px 0 0 0;
+  margin: 20px 0 15px 0;
 }
 .housing__datas {
   display: -webkit-box;
@@ -548,19 +560,12 @@ footer p {
 }
 .housing__collapse {
   display: grid;
-  overflow: hidden;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 1fr;
   gap: 76px;
 }
-.housing__collapse .description {
-  overflow: hidden;
-}
 .housing__collapse .description .open {
   display: block;
-}
-.housing__collapse .equipments {
-  overflow: hidden;
 }
 .housing__collapse .equipments .open {
   display: block;
@@ -589,6 +594,7 @@ footer p {
   }
   .housing {
     margin-top: 27px;
+    margin-bottom: 64px;
   }
   .housing__datas {
     margin-top: 0;
@@ -598,13 +604,13 @@ footer p {
             flex-direction: column;
   }
   .housing__title-loc {
-    margin-top: 15px;
+    margin-top: 10px;
   }
   .housing__title-loc h1 {
     margin-bottom: 5px;
   }
   .housing__tags {
-    margin-top: 10px;
+    margin-top: 5px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -613,6 +619,9 @@ footer p {
     border-radius: 5px;
     padding: 2px 30px 1px 29px;
     margin-top: 10px;
+  }
+  .housing__data-1 {
+    margin-bottom: 15px;
   }
   .housing__data-2 {
     -webkit-box-orient: horizontal;
@@ -641,19 +650,16 @@ footer p {
     margin-top: 0;
   }
   .housing__collapse {
-    grid-template-columns: none;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
+    display: block;
   }
   .housing__collapse .description {
-    margin-right: 0;
     margin-bottom: 20px;
   }
   .housing__collapse .collapse {
     border-radius: 5px;
   }
   .housing__collapse .collapse__container-Housing {
-    padding: 23px 7px 5px 11px;
+    padding: 18px 6px 4px 11px;
   }
 }
 .error {
@@ -683,7 +689,7 @@ footer p {
     margin: 11px 58px 133px 90px;
   }
   .error__link {
-    margin-bottom: 50px;
+    margin-bottom: 235px;
   }
 }
 *,
@@ -971,7 +977,7 @@ footer p {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff6060), color-stop(205%, rgb(0, 0, 0)));
   background: linear-gradient(180deg, #ff6060 0%, rgb(0, 0, 0) 205%);
   overflow: hidden;
-  margin: 42px 30px 0 40px;
+  margin: 50px 8px 0 50px;
 }
 .card__image {
   position: relative;
@@ -1046,9 +1052,9 @@ footer p {
           align-items: center;
   background-color: #ff6060;
   color: #ffffff;
-  height: 35px;
+  height: 47px;
   border-radius: 5px;
-  padding: 0 20px 0 16px;
+  padding: 0 30px 0 18px;
   cursor: pointer;
 }
 .collapse__chevron {
@@ -1066,6 +1072,12 @@ footer p {
           transform: rotate(314deg);
 }
 
+@media screen and (max-width: 576px) {
+  .collapse__title_chevron {
+    height: 34px;
+    padding: 0 10px 0 12px;
+  }
+}
 .carousel {
   height: 415px;
   position: relative;
@@ -1092,7 +1104,7 @@ footer p {
 }
 .carousel__container-text {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);

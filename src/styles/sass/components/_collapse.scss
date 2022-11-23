@@ -7,9 +7,9 @@
     align-items: center;
     background-color: $orange;
     color: $white;
-    height: 35px;
+    height: 47px;
     border-radius: 5px;
-    padding: 0 20px 0 16px;
+    padding: 0 30px 0 18px;
     cursor: pointer;
   }
   &__chevron {
@@ -22,6 +22,15 @@
     &.open {
       margin-bottom: 12px;
       transform: rotate(314deg);
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .collapse {
+    &__title_chevron {
+      height: 34px;
+      padding: 0 10px 0 12px;
     }
   }
 }

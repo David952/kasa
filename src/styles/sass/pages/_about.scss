@@ -1,7 +1,7 @@
 @use '../utils/variables' as *;
 
 .about {
-  margin: 31px 109px 0 108px;
+  margin: 31px 109px 200px 108px;
 }
 
 .collapse-About {
@@ -24,7 +24,18 @@
 }
 
 @media screen and (max-width: 576px) {
-  .collapse-About {
-    margin-bottom: 20px;
+  .about {
+    margin-top: 20px;
+    margin-bottom: 168px;
+    .collapse-About {
+      margin-bottom: 20px;
+    }
+  }
+  .collapse {
+    &__container-About {
+      &--text {
+        padding: 17px 6px 50px 12px;
+      }
+    }
   }
 }
