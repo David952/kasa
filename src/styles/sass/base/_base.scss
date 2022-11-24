@@ -1,4 +1,5 @@
 @use '../utils/variables' as *;
+@use '../utils/mixins' as *;
 
 *,
 :before,
@@ -13,14 +14,14 @@
   margin-right: $margin_page;
 }
 
-@media screen and (min-width: 577px) and (max-width: 1023px) {
+@include tablet {
   .section__margin {
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: $margin_tablet;
+    margin-right: $margin_tablet;
   }
 }
 
-@media screen and (max-width: 576px) {
+@include mobile {
   .section__margin {
     margin-left: $margin_mobile;
     margin-right: $margin_mobile;

@@ -8,8 +8,7 @@
     margin-top: 24px;
   }
   &__data-1 {
-    display: flex;
-    flex-direction: column;
+    @include flex_column;
     margin-bottom: 24px;
   }
   &__tags {
@@ -17,8 +16,7 @@
     margin-top: 20px;
   }
   &__data-2 {
-    display: flex;
-    flex-direction: column;
+    @include flex_column;
   }
   &__name-avatar {
     display: flex;
@@ -30,9 +28,9 @@
     margin-right: 10px;
   }
   &__avatar {
-    width: 64px;
-    height: 64px;
-    background-color: #c4c4c4;
+    width: $width_avatar;
+    height: $height_avatar;
+    background-color: $grey;
     border-radius: 32px;
     position: relative;
     overflow: hidden;
@@ -42,7 +40,7 @@
   }
   &__rating {
     display: flex;
-    margin-top: 14px;
+    margin-top: 18px;
     width: 196px;
     height: 39px;
   }
@@ -62,8 +60,10 @@
       }
     }
     .collapse {
+      @include flex_column;
       border-radius: 10px;
       &__container-Housing {
+        flex: 1;
         background-color: $grey;
         border-radius: 10px;
         padding: 30px 12px 27px 20px;
@@ -84,7 +84,7 @@
   }
 }
 
-@media screen and (max-width: 576px) {
+@include mobile {
   h1 {
     margin: 0;
   }
@@ -121,8 +121,8 @@
       margin-bottom: 22px;
     }
     &__avatar {
-      height: 32px;
-      width: 32px;
+      height: $height_avatar_mobile;
+      width: $width_avatar_mobile;
     }
     &__rating {
       display: flex;
@@ -130,7 +130,8 @@
       margin-top: 0;
     }
     &__collapse {
-      display: block;
+      grid: none;
+      gap: 0;
       & .description {
         margin-bottom: 20px;
       }

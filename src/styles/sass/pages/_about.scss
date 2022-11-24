@@ -1,4 +1,5 @@
 @use '../utils/variables' as *;
+@use '../utils/mixins' as *;
 
 .about {
   margin: 31px 109px 200px 108px;
@@ -10,12 +11,11 @@
 .collapse {
   &__container-About {
     border-radius: 5px;
-    &.open {
+    & .open {
       background-color: $grey;
     }
-    &.closed {
-      overflow: hidden;
-      max-height: 0;
+    & .closed {
+      display: none;
     }
     &--text {
       padding: 25px 27px 19px 18px;
@@ -23,7 +23,7 @@
   }
 }
 
-@media screen and (max-width: 576px) {
+@include mobile {
   .about {
     margin-top: 20px;
     margin-bottom: 168px;

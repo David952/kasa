@@ -33,7 +33,7 @@
   }
 }
 
-@media screen and (max-width: 576px) {
+@include mobile {
   .banner {
     justify-content: left;
     &__image-Home {
@@ -54,7 +54,7 @@
     }
     &.banner-about {
       height: 223px;
-      margin: 17px 19px 0 $margin_mobile;
+      margin-top: 17px;
     }
   }
 }

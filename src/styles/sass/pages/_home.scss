@@ -1,4 +1,5 @@
 @use '../utils/variables' as *;
+@use '../utils/mixins' as *;
 
 .home {
   display: flex;
@@ -10,14 +11,14 @@
   background-color: $grey;
 }
 
-@media screen and (min-width: 577px) and (max-width: 1023px) {
+@include tablet {
   .home {
     background-color: $white;
     margin-top: 22px;
   }
 }
 
-@media screen and (max-width: 576px) {
+@include mobile {
   .home {
     justify-content: center;
     background-color: $white;

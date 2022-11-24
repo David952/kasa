@@ -1,4 +1,5 @@
 @use '../../utils/variables' as *;
+@use '../../utils/mixins' as *;
 
 .carousel {
   height: 415px;
@@ -52,13 +53,13 @@
   }
 }
 
-@media screen and (min-width: 577px) and (max-width: 1023px) {
+@include tablet {
   .carousel {
     height: 340px;
   }
 }
 
-@media screen and (max-width: 576px) {
+@include mobile {
   .carousel {
     height: 224px;
     border-radius: 10px;

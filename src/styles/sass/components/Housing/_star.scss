@@ -1,10 +1,11 @@
 @use '../../utils/variables' as *;
+@use '../../utils/mixins' as *;
 
 .star {
   display: flex;
   align-items: center;
-  height: 36px;
-  width: 36px;
+  height: $height_star;
+  width: $width_star;
   font-size: 44px;
   color: #e3e3e3;
   margin-right: 4px;
@@ -13,10 +14,10 @@
   color: $orange;
 }
 
-@media screen and (max-width: 576px) {
+@include mobile {
   .star {
-    height: 18px;
-    width: 18px;
+    height: $height_star_mobile;
+    width: $width_star_mobile;
     font-size: 22px;
     margin-right: 2px;
   }

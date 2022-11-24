@@ -1,4 +1,5 @@
 @use '../utils/variables' as *;
+@use '../utils/mixins' as *;
 
 footer {
   display: flex;
@@ -19,7 +20,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 576px) {
+@include mobile {
   footer {
     padding-bottom: 30px;
     & p {

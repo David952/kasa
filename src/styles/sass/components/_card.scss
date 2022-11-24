@@ -1,4 +1,5 @@
 @use '../utils/variables' as *;
+@use '../utils/mixins' as *;
 
 .card {
   height: $height_card;
@@ -46,11 +47,11 @@
 
 @media screen and (min-width: 577px) and (max-width: 911px) {
   .card {
-    width: 280px;
-    height: 280px;
+    width: $width_card_tablet;
+    height: $height_card_tablet;
     & img {
-      width: 280px;
-      height: 280px;
+      width: $width_card_tablet;
+      height: $height_card_tablet;
     }
     &__title {
       padding-right: 14px;
@@ -58,14 +59,14 @@
   }
 }
 
-@media screen and (max-width: 576px) {
+@include mobile {
   .card {
-    width: 335px;
-    height: 255px;
+    width: $width_card_mobile;
+    height: $height_card_mobile;
     margin: 0;
     margin-bottom: 20px;
     &__image {
-      height: 255px;
+      height: $height_card_mobile;
     }
   }
 }

@@ -461,12 +461,11 @@ footer p {
 .collapse__container-About {
   border-radius: 5px;
 }
-.collapse__container-About.open {
+.collapse__container-About .open {
   background-color: #f6f6f6;
 }
-.collapse__container-About.closed {
-  overflow: hidden;
-  max-height: 0;
+.collapse__container-About .closed {
+  display: none;
 }
 .collapse__container-About--text {
   padding: 25px 27px 19px 18px;
@@ -541,7 +540,7 @@ footer p {
 .housing__avatar {
   width: 64px;
   height: 64px;
-  background-color: #c4c4c4;
+  background-color: #f6f6f6;
   border-radius: 32px;
   position: relative;
   overflow: hidden;
@@ -554,7 +553,7 @@ footer p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 14px;
+  margin-top: 18px;
   width: 196px;
   height: 39px;
 }
@@ -571,9 +570,19 @@ footer p {
   display: block;
 }
 .housing__collapse .collapse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border-radius: 10px;
 }
 .housing__collapse .collapse__container-Housing {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   background-color: #f6f6f6;
   border-radius: 10px;
   padding: 30px 12px 27px 20px;
@@ -650,7 +659,8 @@ footer p {
     margin-top: 0;
   }
   .housing__collapse {
-    display: block;
+    grid: none;
+    gap: 0;
   }
   .housing__collapse .description {
     margin-bottom: 20px;
@@ -967,7 +977,7 @@ footer p {
   }
   .banner.banner-about {
     height: 223px;
-    margin: 17px 19px 0 20px;
+    margin-top: 17px;
   }
 }
 .card {
