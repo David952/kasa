@@ -23,6 +23,13 @@
   }
 }
 
+@include tablet {
+  .about {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+
 @include mobile {
   .about {
     margin: 19px $margin_mobile 168px $margin_mobile;
