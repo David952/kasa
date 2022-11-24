@@ -5,28 +5,47 @@ function Collapse(props) {
   const isString = typeof props.CollapseText === 'string';
 
   return (
-    <div className={`${props.CollapseClass} `} onClick={() => setOpen(!isOpen)}>
-      <div className={`collapse__title_chevron`}>
+    <div
+      className={`${props.CollapseClass} ${!isOpen ? 'closed' : 'open'}`}
+      onClick={() => setOpen(!isOpen)}
+    >
+      <div className="collapse__title_chevron">
         <h1 className={props.CollapseClassTitle}>{props.CollapseTitle}</h1>
-        <span
-          className={`collapse__chevron ${isOpen ? 'open' : 'closed'}`}
-        ></span>
-      </div>
-      <div
-        className={`${props.CollapseClassContainer} ${
-          !isOpen ? 'closed' : 'open'
-        }`}
-      >
-        {isString ? (
-          <p className={props.CollapseClassText}>{props.CollapseText}</p>
+        {isOpen ? (
+          <span className="collapse__chevron open"></span>
         ) : (
-          props.CollapseText.map((text, index) => (
-            <p key={index} className={props.CollapseClassText}>
-              {text}
-            </p>
-          ))
+          <span className="collapse__chevron"></span>
         )}
       </div>
+      {isOpen ? (
+        <div className={`${props.CollapseClassContainer} open`}>
+          {isString ? (
+            <p className={`${props.CollapseClassText} open`}>
+              {props.CollapseText}
+            </p>
+          ) : (
+            props.CollapseText.map((text, index) => (
+              <p key={index} className={`${props.CollapseClassText} open`}>
+                {text}
+              </p>
+            ))
+          )}
+        </div>
+      ) : (
+        <div className={`${props.CollapseClassContainer} closed`}>
+          {isString ? (
+            <p className={`${props.CollapseClassText} closed`}>
+              {props.CollapseText}
+            </p>
+          ) : (
+            props.CollapseText.map((text, index) => (
+              <p key={index} className={`${props.CollapseClassText} closed`}>
+                {text}
+              </p>
+            ))
+          )}
+        </div>
+      )}
     </div>
   );
 }
