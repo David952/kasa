@@ -11,8 +11,8 @@ import Star from '../../components/Housing/Star';
 import Collapse from '../../components/Collapse';
 import Footer from '../../components/Footer';
 
-export function loader({ params }) {
-  return getHousing(params.housingId);
+export async function loader({ params }) {
+  return await getHousing(params.housingId);
 }
 
 export default function Housing() {
@@ -59,6 +59,7 @@ export default function Housing() {
         <div className="housing__collapse">
           <Collapse
             CollapseClass="collapse description"
+            CollapseClassTitleChevron="collapse__title_chevron collapse__title_chevron-Housing"
             CollapseClassTitle="collapse__title-Housing"
             CollapseTitle="Description"
             CollapseClassContainer="collapse__container-Housing"
@@ -67,6 +68,7 @@ export default function Housing() {
           />
           <Collapse
             CollapseClass="collapse equipments"
+            CollapseClassTitleChevron="collapse__title_chevron collapse__title_chevron-Housing"
             CollapseClassTitle="collapse__title-Housing"
             CollapseTitle="Équipements"
             CollapseClassContainer="collapse__container-Housing"

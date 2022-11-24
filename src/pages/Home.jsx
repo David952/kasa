@@ -9,9 +9,8 @@ import Footer from '../components/Footer';
 
 import image from '../assets/Banner/Home/eric-muhr-P_XxsdVgtpQ-unsplash.png';
 
-export function loader() {
-  const housings = getHousings();
-  return { housings };
+export async function loader() {
+  return await getHousings();
 }
 
 function Home() {
@@ -19,7 +18,7 @@ function Home() {
     document.title = 'Kasa';
   }, []);
 
-  const { housings } = useLoaderData();
+  const housings = useLoaderData();
 
   return (
     <>
