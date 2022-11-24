@@ -5,7 +5,6 @@
   height: $height_card;
   width: $width_card;
   border-radius: 10px;
-  background: linear-gradient(180deg, $orange 0%, rgba(0, 0, 0, 1) 205%);
   overflow: hidden;
   margin: 50px 8px 0 50px;
   &__image {
@@ -28,7 +27,11 @@
         left: 0;
         right: 0;
         bottom: 0;
-        box-shadow: inset 0px -115px 60px -25px rgba(0, 0, 0, 0.15);
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.75) 0%,
+          rgba(0, 0, 0, 0) 40%
+        );
       }
     }
   }

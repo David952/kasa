@@ -451,7 +451,7 @@ footer p {
   }
 }
 .about {
-  margin: 31px 109px 200px 108px;
+  margin: 31px 209px 200px 208px;
 }
 
 .collapse-About {
@@ -473,8 +473,7 @@ footer p {
 
 @media screen and (max-width: 576px) {
   .about {
-    margin-top: 20px;
-    margin-bottom: 168px;
+    margin: 19px 20px 168px 20px;
   }
   .about .collapse-About {
     margin-bottom: 20px;
@@ -563,6 +562,10 @@ footer p {
   grid-auto-rows: 1fr;
   gap: 76px;
 }
+.housing__collapse .collapse__title_chevron-Housing {
+  height: 52px;
+  border-radius: 10px;
+}
 .housing__collapse .description .open {
   display: block;
 }
@@ -577,7 +580,6 @@ footer p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border-radius: 10px;
 }
 .housing__collapse .collapse__container-Housing {
   -webkit-box-flex: 1;
@@ -661,6 +663,10 @@ footer p {
   .housing__collapse {
     grid: none;
     gap: 0;
+  }
+  .housing__collapse .collapse__title_chevron-Housing {
+    height: 30px;
+    border-radius: 5px;
   }
   .housing__collapse .description {
     margin-bottom: 20px;
@@ -984,8 +990,6 @@ footer p {
   height: 340px;
   width: 340px;
   border-radius: 10px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff6060), color-stop(205%, rgb(0, 0, 0)));
-  background: linear-gradient(180deg, #ff6060 0%, rgb(0, 0, 0) 205%);
   overflow: hidden;
   margin: 50px 8px 0 50px;
 }
@@ -1012,8 +1016,8 @@ footer p {
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-box-shadow: inset 0px -115px 60px -25px rgba(0, 0, 0, 0.15);
-          box-shadow: inset 0px -115px 60px -25px rgba(0, 0, 0, 0.15);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), color-stop(40%, rgba(0, 0, 0, 0)));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 40%);
 }
 .card__title {
   position: relative;
@@ -1084,7 +1088,7 @@ footer p {
 
 @media screen and (max-width: 576px) {
   .collapse__title_chevron {
-    height: 34px;
+    height: 30px;
     padding: 0 10px 0 12px;
   }
 }

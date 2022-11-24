@@ -2,7 +2,7 @@
 @use '../utils/mixins' as *;
 
 .about {
-  margin: 31px 109px 200px 108px;
+  margin: 31px 209px 200px 208px;
 }
 
 .collapse-About {
@@ -25,10 +25,9 @@
 
 @include mobile {
   .about {
-    margin-top: 20px;
-    margin-bottom: 168px;
+    margin: 19px $margin_mobile 168px $margin_mobile;
     .collapse-About {
-      margin-bottom: 20px;
+      margin-bottom: $margin_mobile;
     }
   }
   .collapse {
