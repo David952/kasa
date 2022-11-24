@@ -3,23 +3,16 @@ import useImagePreloader from '../../hooks/imgPreload';
 
 export default function Carousel(props) {
   const [sliderPosition, setSliderPosition] = useState(0);
-  const { imagesPreloaded } = useImagePreloader(props.CarouselImages);
+  //Permet un chargement fluide des images du caroussel
+  useImagePreloader(props.CarouselImages);
   const length = props.CarouselImages.length;
 
   const prevSlide = () => {
-    setSliderPosition(
-      sliderPosition === 0
-        ? props.CarouselImages.length - 1
-        : sliderPosition - 1
-    );
+    setSliderPosition(sliderPosition === 0 ? length - 1 : sliderPosition - 1);
   };
 
   const nextSlide = () => {
-    setSliderPosition(
-      sliderPosition === props.CarouselImages.length - 1
-        ? 0
-        : sliderPosition + 1
-    );
+    setSliderPosition(sliderPosition === length - 1 ? 0 : sliderPosition + 1);
   };
 
   return (

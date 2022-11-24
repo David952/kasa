@@ -9,7 +9,7 @@ function Collapse(props) {
       className={`${props.CollapseClass} ${!isOpen ? 'closed' : 'open'}`}
       onClick={() => setOpen(!isOpen)}
     >
-      <div className="collapse__title_chevron">
+      <div className={props.CollapseClassTitleChevron}>
         <h1 className={props.CollapseClassTitle}>{props.CollapseTitle}</h1>
         {isOpen ? (
           <span className="collapse__chevron open"></span>
