@@ -471,6 +471,12 @@ footer p {
   padding: 25px 27px 19px 18px;
 }
 
+@media screen and (min-width: 577px) and (max-width: 1023px) {
+  .about {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
 @media screen and (max-width: 576px) {
   .about {
     margin: 19px 20px 168px 20px;
