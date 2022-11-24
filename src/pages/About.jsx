@@ -44,13 +44,14 @@ function About() {
         img={image}
         alt="Montagne"
       />
-      <main className="about section__margin">
+      <main className="about">
         {dataCollapse &&
           dataCollapse.map((data, index) => {
             return (
               <Collapse
                 key={index}
                 CollapseClass="collapse collapse-About"
+                CollapseClassTitleChevron="collapse__title_chevron"
                 CollapseClassTitle="collapse__title-About"
                 CollapseTitle={data.AboutTitle}
                 CollapseClassContainer="collapse__container-About"
