@@ -39,37 +39,25 @@
     position: relative;
     left: 15px;
     bottom: 65px;
+    padding-right: 18px;
   }
 }
 
-@media screen and (min-width: 1366px) and (max-width: 1439px) {
+@media screen and (max-width: 845px) {
   .card {
-    margin: 24px 24px 0 24px;
-  }
-}
-
-@media screen and (min-width: 577px) and (max-width: 911px) {
-  .card {
-    width: $width_card_tablet;
-    height: $height_card_tablet;
-    & img {
-      width: $width_card_tablet;
-      height: $height_card_tablet;
-    }
-    &__title {
-      padding-right: 14px;
-    }
-  }
-}
-
-@include mobile {
-  .card {
-    width: $width_card_mobile;
+    width: 100%;
     height: $height_card_mobile;
     margin: 0;
     margin-bottom: 20px;
     &__image {
       height: $height_card_mobile;
+      width: 100%;
+      & img {
+        width: 100%;
+      }
+    }
+    &__title {
+      bottom: 55px;
     }
   }
 }

@@ -1029,35 +1029,25 @@ footer p {
   position: relative;
   left: 15px;
   bottom: 65px;
+  padding-right: 18px;
 }
 
-@media screen and (min-width: 1366px) and (max-width: 1439px) {
+@media screen and (max-width: 845px) {
   .card {
-    margin: 24px 24px 0 24px;
-  }
-}
-@media screen and (min-width: 577px) and (max-width: 911px) {
-  .card {
-    width: 280px;
-    height: 280px;
-  }
-  .card img {
-    width: 280px;
-    height: 280px;
-  }
-  .card__title {
-    padding-right: 14px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .card {
-    width: 335px;
+    width: 100%;
     height: 255px;
     margin: 0;
     margin-bottom: 20px;
   }
   .card__image {
     height: 255px;
+    width: 100%;
+  }
+  .card__image img {
+    width: 100%;
+  }
+  .card__title {
+    bottom: 55px;
   }
 }
 .collapse__title_chevron {
