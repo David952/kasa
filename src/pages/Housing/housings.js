@@ -16,9 +16,9 @@ export async function getHousing(id) {
   return housing ?? null;
 }
 
-//Simulation d'une latence internet
-//https://reactrouter.com/en/main/start/tutorial
-//https://gist.githubusercontent.com/ryanflorence/1e7f5d3344c0db4a8394292c157cd305/raw/f7ff21e9ae7ffd55bfaaaf320e09c6a08a8a6611/contacts.js
+// Simulation d'une latence internet
+// https://reactrouter.com/en/main/start/tutorial
+// https://gist.githubusercontent.com/ryanflorence/1e7f5d3344c0db4a8394292c157cd305/raw/f7ff21e9ae7ffd55bfaaaf320e09c6a08a8a6611/contacts.js
 
 async function fakeNetwork() {
   return new Promise((res) => {
