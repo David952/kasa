@@ -1,4 +1,8 @@
-# Installation du projet Kasa
+# Kasa #
+
+Créez une application web de location immobilière avec React
+
+## Installation du projet ##
 
 ### Prérequis
 
